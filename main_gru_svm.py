@@ -16,17 +16,16 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 # ==============================================================================
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+from __future__ import absolute_import, division, print_function
 
 __version__ = "0.1.1"
 __author__ = "Abien Fred Agarap"
 
-from models.gru_svm import GruSvm
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
+
+from models.gru_svm import GruSvm
 
 BATCH_SIZE = 128
 CELL_SIZE = 128
@@ -84,14 +83,14 @@ def main():
 
     model.train(
         checkpoint_path="./checkpoint_path/gru_svm/",
-        log_path="./log_path/gru_svm/",
+        log_path="./logs/gru_svm/",
         model_name="gru_svm",
         epochs=3000,
         train_data=[train_features, train_labels],
         train_size=train_size,
         validation_data=[test_features, test_labels],
         validation_size=test_size,
-        result_path="./results",
+        result_path="./results/gru_svm/",
     )
 
 

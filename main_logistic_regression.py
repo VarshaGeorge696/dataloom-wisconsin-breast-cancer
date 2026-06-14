@@ -13,17 +13,17 @@
 # limitations under the License.
 
 """Implements the Logistic Regression class"""
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+
+from __future__ import absolute_import, division, print_function
 
 __version__ = "0.1.0"
 __author__ = "Abien Fred Agarap"
 
-from models.logistic_regression import LogisticRegression
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
+
+from models.logistic_regression import LogisticRegression
 
 BATCH_SIZE = 128
 LEARNING_RATE = 1e-3
@@ -73,7 +73,7 @@ def main():
 
     model.train(
         checkpoint_path="./checkpoint_path/logistic_regression/",
-        log_path="./log_path/logistic_regression/",
+        log_path="./logs/logistic_regression/",
         model_name="logistic_regression",
         epochs=3000,
         train_data=[train_features, train_labels],

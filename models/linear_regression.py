@@ -14,17 +14,19 @@
 # ==============================================================================
 
 """Implementation of Linear Regression"""
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+
+from __future__ import absolute_import, division, print_function
 
 __version__ = "0.1.0"
 __author__ = "Abien Fred Agarap"
 
-import numpy as np
 import os
 import time
-import tensorflow as tf
+
+import numpy as np
+import tensorflow.compat.v1 as tf
+
+tf.disable_v2_behavior()
 import sys
 
 

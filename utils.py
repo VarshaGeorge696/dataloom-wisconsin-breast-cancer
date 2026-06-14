@@ -14,18 +14,20 @@
 # =========================================================================
 
 """Utility functions for data handling"""
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+
+from __future__ import absolute_import, division, print_function
 
 __version__ = "0.2.0"
 __author__ = "Abien Fred Agarap"
 
+import os
+
 import matplotlib.pyplot as plt
 import numpy as np
-import os
+import tensorflow.compat.v1 as tf
 from sklearn.metrics import confusion_matrix
-import tensorflow as tf
+
+tf.disable_v2_behavior()
 
 
 def list_files(path):
@@ -49,7 +51,7 @@ def list_files(path):
     """
 
     file_list = []
-    for (dir_path, dir_names, file_names) in os.walk(path):
+    for dir_path, dir_names, file_names in os.walk(path):
         file_list.extend(os.path.join(dir_path, filename) for filename in file_names)
     return file_list
 
@@ -102,7 +104,6 @@ def plot_confusion_matrix(phase, path, class_names):
 
     # create a TensorFlow session
     with tf.Session() as sess:
-
         # decode the one-hot encoded labels to single integer
         predictions = sess.run(tf.argmax(predictions, 1))
         actual = sess.run(tf.argmax(actual, 1))

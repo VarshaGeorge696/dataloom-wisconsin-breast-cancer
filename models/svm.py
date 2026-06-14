@@ -13,17 +13,19 @@
 # limitations under the License.
 
 """Implementation of Support Vector Machine using TensorFlow"""
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+
+from __future__ import absolute_import, division, print_function
 
 __version__ = "0.1.5"
 __author__ = "Abien Fred Agarap"
 
-import numpy as np
 import os
 import sys
-import tensorflow as tf
+
+import numpy as np
+import tensorflow.compat.v1 as tf
+
+tf.disable_v2_behavior()
 import time
 
 
@@ -223,7 +225,6 @@ class SVM:
                 print("EOF -- training done at step {}".format(step))
 
                 for step in range(epochs * validation_size // self.batch_size):
-
                     feed_dict = {
                         self.x_input: validation_data[0][: self.batch_size],
                         self.y_input: validation_data[1][: self.batch_size],

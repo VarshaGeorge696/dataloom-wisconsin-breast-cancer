@@ -17,17 +17,21 @@
 # ==============================================================================
 
 """Implementation of the GRU-SVM model [http://arxiv.org/abs/1709.03082] by A.F. Agarap"""
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+
+from __future__ import absolute_import, division, print_function
 
 __version__ = "0.3.9"
 __author__ = "Abien Fred Agarap"
 
-import numpy as np
 import os
 import sys
-import tensorflow as tf
+
+os.environ["TF_USE_LEGACY_KERAS"] = "1"
+
+import numpy as np
+import tensorflow.compat.v1 as tf
+
+tf.disable_v2_behavior()
 import time
 
 
@@ -107,8 +111,8 @@ class GruSvm:
             p_keep = tf.placeholder(dtype=tf.float32, name="p_keep")
             learning_rate = tf.placeholder(dtype=tf.float32, name="learning_rate")
 
-            cell = tf.contrib.rnn.GRUCell(self.cell_size)
-            drop_cell = tf.contrib.rnn.DropoutWrapper(cell, input_keep_prob=p_keep)
+            cell = tf.nn.rnn_cell.GRUCell(self.cell_size)
+            drop_cell = tf.nn.rnn_cell.DropoutWrapper(cell, input_keep_prob=p_keep)
 
             # outputs: [BATCH_SIZE, SEQUENCE_LENGTH, CELL_SIZE]
             # states: [BATCH_SIZE, CELL_SIZE]
@@ -226,7 +230,7 @@ class GruSvm:
         """
 
         if not os.path.exists(path=checkpoint_path):
-            os.mkdir(path=checkpoint_path)
+            os.makedirs(checkpoint_path, exist_ok=True)
 
         saver = tf.train.Saver(max_to_keep=10)
 
@@ -261,7 +265,6 @@ class GruSvm:
 
             try:
                 for step in range(epochs * train_size // self.batch_size):
-
                     # set the value for slicing
                     # e.g. step = 0, batch_size = 256, train_size = 1898240
                     # (0 * 256) % 1898240 = 0
@@ -330,7 +333,6 @@ class GruSvm:
                 print("EOF -- Training done at step {}".format(step))
 
                 for step in range(epochs * validation_size // self.batch_size):
-
                     offset = (step * self.batch_size) % validation_size
                     test_example_batch = validation_data[0][
                         offset : (offset + self.batch_size)
@@ -366,7 +368,6 @@ class GruSvm:
 
                     # Display validation loss and accuracy every 100 steps
                     if step % 100 == 0 and step > 0:
-
                         # add the validation summary
                         validation_writer.add_summary(validation_summary, step)
 

@@ -20,16 +20,18 @@ https://github.com/aymericdamien/TensorFlow-Examples/blob/master/examples/2_Basi
 Accessed: November 17, 2017.
 
 """
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+
+from __future__ import absolute_import, division, print_function
 
 __version__ = "0.1.0"
 __author__ = "Abien Fred Agarap"
 
-import numpy as np
 import os
-import tensorflow as tf
+
+import numpy as np
+import tensorflow.compat.v1 as tf
+
+tf.disable_v2_behavior()
 
 
 class NearestNeighbor:
@@ -66,7 +68,6 @@ class NearestNeighbor:
 
         # Start training
         with tf.Session() as sess:
-
             # Run the initializer
             sess.run(init)
 
@@ -74,7 +75,6 @@ class NearestNeighbor:
 
             # loop over test data
             for index in range(len(test_features)):
-
                 feed_dict = {
                     self.xtr: self.train_features,
                     self.xte: test_features[index, :],
