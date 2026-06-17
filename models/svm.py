@@ -206,8 +206,23 @@ class SVM:
                         self.learning_rate: self.alpha,
                     }
 
-                    summary, _, step_loss = sess.run(
-                        [self.merged, self.optimizer, self.loss], feed_dict=feed_dict
+                    summary, _, step_loss, predictions, actual = sess.run(
+                        [
+                            self.merged,
+                            self.optimizer,
+                            self.loss,
+                            self.predicted_class,
+                            self.y_onehot,
+                        ],
+                        feed_dict=feed_dict,
+                    )
+
+                    self.save_labels(
+                        predictions=predictions,
+                        actual=actual,
+                        result_path=result_path,
+                        step=step,
+                        phase="training",
                     )
 
                     if step % 100 == 0:
@@ -297,8 +312,7 @@ class SVM:
           The phase for which the predictions is, i.e. training/validation/testing.
         """
 
-        if not os.path.exists(path=result_path):
-            os.mkdir(result_path)
+        os.makedirs(result_path, exist_ok=True)
 
         # Concatenate the predicted and actual labels
         labels = np.concatenate((predictions, actual), axis=1)

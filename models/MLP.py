@@ -14,18 +14,19 @@
 # =========================================================================
 
 """Implementation of the Multilayer Perceptron using TensorFlow"""
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+
+from __future__ import absolute_import, division, print_function
 
 __version__ = "0.1.0"
 __author__ = "Abien Fred Agarap"
 
-import numpy as np
 import os
 import sys
 import time
+
+import numpy as np
 import tensorflow.compat.v1 as tf
+
 tf.disable_v2_behavior()
 
 
@@ -227,8 +228,23 @@ class MLP:
                         self.learning_rate: self.alpha,
                     }
 
-                    train_summary, _, step_loss = sess.run(
-                        [self.merged, self.optimizer_op, self.loss], feed_dict=feed_dict
+                    train_summary, _, step_loss, predictions, actual = sess.run(
+                        [
+                            self.merged,
+                            self.optimizer_op,
+                            self.loss,
+                            self.predicted_class,
+                            self.y_onehot,
+                        ],
+                        feed_dict=feed_dict,
+                    )
+
+                    self.save_labels(
+                        predictions=predictions,
+                        actual=actual,
+                        result_path=result_path,
+                        phase="training",
+                        step=step,
                     )
 
                     if step % 100 == 0 and step > 0:
@@ -353,8 +369,7 @@ class MLP:
           The phase for which the predictions is, i.e. training/validation/testing.
         """
 
-        if not os.path.exists(path=result_path):
-            os.mkdir(result_path)
+        os.makedirs(result_path, exist_ok=True)
 
         # Concatenate the predicted and actual labels
         labels = np.concatenate((predictions, actual), axis=1)

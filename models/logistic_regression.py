@@ -162,8 +162,7 @@ class LogisticRegression:
           The path where to save the actual and predicted classes array.
         """
 
-        if not os.path.exists(path=checkpoint_path):
-            os.mkdir(path=checkpoint_path)
+        os.makedirs(checkpoint_path, exist_ok=True)
 
         saver = tf.train.Saver(max_to_keep=10)
 
@@ -324,8 +323,7 @@ class LogisticRegression:
           The phase for which the predictions is, i.e. training/validation/testing.
         """
 
-        if not os.path.exists(path=result_path):
-            os.mkdir(result_path)
+        os.makedirs(result_path, exist_ok=True)
 
         # Concatenate the predicted and actual labels
         labels = np.concatenate((predictions, actual), axis=1)

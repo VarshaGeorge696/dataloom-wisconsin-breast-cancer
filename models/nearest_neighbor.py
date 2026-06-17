@@ -73,6 +73,35 @@ class NearestNeighbor:
 
             y_, y = sess.run([test_labels, train_labels])
 
+            # # loop over training data (predict on training samples)
+            # train_accuracy = 0.0
+            # for index in range(len(self.train_features)):
+            #     feed_dict = {
+            #         self.xtr: self.train_features,
+            #         self.xte: self.train_features[index, :],
+            #     }
+
+            #     nn_index = sess.run(self.prediction, feed_dict=feed_dict)
+
+            #     print(
+            #         "Train [{}] Actual Class: {}, Predicted Class : {}".format(
+            #             index, np.argmax(y[index]), np.argmax(y[nn_index])
+            #         )
+            #     )
+
+            #     self.save_labels(
+            #         predictions=np.argmax(y[nn_index]),
+            #         actual=np.argmax(y[index]),
+            #         result_path=result_path,
+            #         step=index,
+            #         phase="training",
+            #     )
+
+            #     if np.argmax(y[nn_index]) == np.argmax(y[index]):
+            #         train_accuracy += 1.0 / len(self.train_features)
+
+            # print("Training Accuracy : {}".format(train_accuracy))
+
             # loop over test data
             for index in range(len(test_features)):
                 feed_dict = {
@@ -119,8 +148,7 @@ class NearestNeighbor:
           The phase for which the prediction is, i.e. training/validation/testing.
         """
 
-        if not os.path.exists(path=result_path):
-            os.mkdir(result_path)
+        os.makedirs(result_path, exist_ok=True)
 
         # Concatenate the predicted and actual labels
         labels = np.array([predictions, actual])
