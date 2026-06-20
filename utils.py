@@ -138,6 +138,91 @@ def plot_confusion_matrix(phase, path, class_names):
     return conf, accuracy
 
 
+# Display name mapping for plot legend
+MODEL_DISPLAY_NAMES = {
+    "svm": "svm",
+    "logistic_regression": "softmax-regression",
+    "mlp": "mlp",
+    "linear_regression": "linear-regression",
+    "gru_svm": "gru-svm",
+}
+
+# Colors matching paper's Figure 2
+MODEL_COLORS = {
+    "svm": "red",
+    "logistic_regression": "darkgreen",
+    "mlp": "blue",
+    "linear_regression": "cyan",
+    "gru_svm": "magenta",
+}
+
+
+def plot_accuracy(log_path, save_path=None, tag="accuracy_1"):
+    """Plot training accuracy over steps for all models from TensorBoard logs.
+
+    Reads TensorBoard event files and generates accuracy-over-steps chart
+    matching paper's Figure 2 style.
+
+    Parameter
+    ---------
+    log_path : str
+      Root log directory containing per-model subdirectories.
+    save_path : str, optional
+      File path to save the plot (e.g. 'results/accuracy.png').
+      If None, displays interactively.
+    tag : str
+      TensorBoard scalar tag to plot. Default 'accuracy_1'.
+    """
+    import glob
+
+    from tensorflow.python.summary.summary_iterator import summary_iterator
+
+    plt.figure(figsize=(12, 6))
+
+    model_dirs = sorted(
+        [d for d in os.listdir(log_path) if os.path.isdir(os.path.join(log_path, d))]
+    )
+
+    for model_name in model_dirs:
+        # Find training event file
+        pattern = os.path.join(log_path, model_name, "*training*", "events*")
+        event_files = glob.glob(pattern)
+        if not event_files:
+            print(f"  [WARN] No training events for {model_name}, skipping")
+            continue
+
+        steps = []
+        values = []
+        for event in summary_iterator(event_files[0]):
+            for v in event.summary.value:
+                if v.tag == tag:
+                    steps.append(event.step)
+                    values.append(v.simple_value)
+
+        if not steps:
+            print(f"  [WARN] No '{tag}' scalars for {model_name}, skipping")
+            continue
+
+        display_name = MODEL_DISPLAY_NAMES.get(model_name, model_name)
+        color = MODEL_COLORS.get(model_name, None)
+        plt.plot(steps, values, label=display_name, color=color, linewidth=1.2)
+
+    plt.xlabel("Steps", fontsize=14)
+    plt.ylabel("Accuracy", fontsize=14)
+    plt.legend(fontsize=12, loc="lower right")
+    plt.grid(True, alpha=0.3)
+    plt.tight_layout()
+
+    if save_path:
+        os.makedirs(os.path.dirname(save_path), exist_ok=True)
+        plt.savefig(save_path, dpi=150, bbox_inches="tight")
+        print(f"  Accuracy plot saved to {save_path}")
+    else:
+        plt.show()
+
+    plt.close()
+
+
 def get_statistical_measures(conf_matrix):
     """Returns an array of statistical measures
 
