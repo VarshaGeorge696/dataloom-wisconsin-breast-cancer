@@ -92,7 +92,7 @@ def plot_confusion_matrix(phase, path, class_names):
                 )
             )
 
-    labels = np.reshape(labels, newshape=(labels.shape[0] // 4, 4))
+    labels = np.reshape(labels, shape=(labels.shape[0] // 4, 4))
 
     print("Done appending NPY files.")
 
