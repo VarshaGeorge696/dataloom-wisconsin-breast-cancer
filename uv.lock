@@ -291,6 +291,31 @@ wheels = [
 ]
 
 [[package]]
+name = "dataloom-wisconsin-breast-cancer"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "matplotlib" },
+    { name = "numpy", version = "2.0.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
+    { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.10.*'" },
+    { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "scikit-learn" },
+    { name = "setuptools" },
+    { name = "tensorflow" },
+    { name = "tf-keras" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "matplotlib", specifier = "==3.9.4" },
+    { name = "numpy", specifier = ">=2.0.2" },
+    { name = "scikit-learn", specifier = "==1.6.1" },
+    { name = "setuptools", specifier = "==80.10.2" },
+    { name = "tensorflow", specifier = "==2.20.0" },
+    { name = "tf-keras", specifier = "==2.20.1" },
+]
+
+[[package]]
 name = "flatbuffers"
 version = "25.12.19"
 source = { registry = "https://pypi.org/simple" }
@@ -1903,31 +1928,6 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/39/62/75f18a0f03b4219c456652c7780e4d749b929eb605c098ce3a5b6b6bc081/wheel-0.47.0.tar.gz", hash = "sha256:cc72bd1009ba0cf63922e28f94d9d83b920aa2bb28f798a31d0691b02fa3c9b3", size = 63854, upload-time = "2026-04-22T15:51:27.727Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/87/1b/9e33c09813d65e248f7f773119148a612516a4bea93e9c6f545f78455b7c/wheel-0.47.0-py3-none-any.whl", hash = "sha256:212281cab4dff978f6cedd499cd893e1f620791ca6ff7107cf270781e587eced", size = 32218, upload-time = "2026-04-22T15:51:26.296Z" },
-]
-
-[[package]]
-name = "wisconsin-breast-cancer"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "matplotlib" },
-    { name = "numpy", version = "2.0.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.10'" },
-    { name = "numpy", version = "2.2.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version == '3.10.*'" },
-    { name = "numpy", version = "2.4.6", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
-    { name = "scikit-learn" },
-    { name = "setuptools" },
-    { name = "tensorflow" },
-    { name = "tf-keras" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "matplotlib", specifier = "==3.9.4" },
-    { name = "numpy", specifier = ">=2.0.2" },
-    { name = "scikit-learn", specifier = "==1.6.1" },
-    { name = "setuptools", specifier = "==80.10.2" },
-    { name = "tensorflow", specifier = "==2.20.0" },
-    { name = "tf-keras", specifier = "==2.20.1" },
 ]
 
 [[package]]

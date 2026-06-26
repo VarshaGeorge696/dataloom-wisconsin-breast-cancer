@@ -1,7 +1,7 @@
 [project]
-name = "wisconsin-breast-cancer"
+name = "dataloom-wisconsin-breast-cancer"
 version = "0.1.0"
-description = "Add your description here"
+description = "This project is a machine readable translation of the wisconsin-breast-cancer dataset analysis and study, to make it compatibile with the Loom project"
 readme = "README.md"
 requires-python = ">=3.9,<3.13"
 dependencies = [
