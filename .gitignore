@@ -129,8 +129,9 @@ dmypy.json
 .pyre/
 
 # Training outputs (regenerable)
-results/
 logs/
 log_path/
 checkpoint_path/
+
+# Only ignoring the numpy files. Keeping the image and the csv
 *.npy

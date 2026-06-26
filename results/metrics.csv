@@ -1,0 +1,7 @@
+model,accuracy,sensitivity,specificity,true_positives,true_negatives,false_positives,false_negatives,total_samples
+gru_svm,0.953125,1.0,0.87234,81,41,6,0,128
+mlp,1.0,1.0,1.0,81,47,0,0,128
+svm,0.992188,1.0,0.976744,85,42,1,0,128
+linear_regression,0.953125,1.0,0.869565,82,40,6,0,128
+logistic_regression,0.984375,0.988372,0.97619,85,41,1,1,128
+nearest_neighbor,0.929825,0.943925,0.90625,101,58,6,6,171
