@@ -1,0 +1,1552 @@
+{
+  "@context": {
+    "doi": "https://doi.org/21.T11969/",
+    "columns": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#columns",
+    "col_number": "https://doi.org/21.T11969/65ba00e95e60fb8971e6#number",
+    "col_titles": "https://doi.org/21.T11969/65ba00e95e60fb8971e6#titles",
+    "rows": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#rows",
+    "row_number": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#number",
+    "row_titles": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#titles",
+    "cells": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#cells",
+    "column": "https://doi.org/21.T11969/4607bc7c42ac8db29bfc#column",
+    "value": "https://doi.org/21.T11969/4607bc7c42ac8db29bfc#value",
+    "tab_label": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#label"
+  },
+  "statements": [
+    {
+      "conclusion": "All six machine learning algorithms exceeded 90% training accuracy.",
+      "algorithm_evaluations": [
+        {
+          "@id": "_:n1",
+          "@type": "doi:5e782e67e70d0b2a022a",
+          "doi:5e782e67e70d0b2a022a#label": "All six ML algorithms exceeded 90% training accuracy \u2014 GRU-SVM",
+          "doi:5e782e67e70d0b2a022a#evaluates": {
+            "@id": "_:n2",
+            "@type": "doi:02f02485ab679a9031f4",
+            "doi:02f02485ab679a9031f4#label": "GRU-SVM"
+          },
+          "doi:5e782e67e70d0b2a022a#evaluates_for": {
+            "@id": "_:n3",
+            "@type": "doi:7bb0ddf9221c03b806b0",
+            "doi:7bb0ddf9221c03b806b0#label": "Binary Classification (Breast Cancer Detection)"
+          },
+          "doi:5e782e67e70d0b2a022a#has_input": [
+            {
+              "@id": "_:n4",
+              "@type": "doi:aff130c76e68ead3862e",
+              "doi:aff130c76e68ead3862e#label": "Wisconsin Diagnostic Breast Cancer (WDBC)",
+              "doi:aff130c76e68ead3862e#source_url": {
+                "@id": "_:n5",
+                "@type": "doi:e0efc41346cda4ba84ca"
+              },
+              "doi:aff130c76e68ead3862e#comment": [
+                "70% training / 30% testing split"
+              ]
+            }
+          ],
+          "doi:5e782e67e70d0b2a022a#has_output": [
+            {
+              "@id": "_:n6",
+              "@type": "doi:aff130c76e68ead3862e",
+              "doi:aff130c76e68ead3862e#label": "Training accuracy for all six ML algorithms",
+              "doi:aff130c76e68ead3862e#source_table": {
+                "@type": "doi:0424f6e7026fa4bc2c4a",
+                "tab_label": "training_accuracy_all_models",
+                "columns": [
+                  {
+                    "@type": "doi:65ba00e95e60fb8971e6",
+                    "col_number": 1,
+                    "col_titles": "algorithm",
+                    "@id": "_:n7"
+                  },
+                  {
+                    "@type": "doi:65ba00e95e60fb8971e6",
+                    "col_number": 2,
+                    "col_titles": "training_accuracy",
+                    "@id": "_:n8"
+                  }
+                ],
+                "rows": [
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 1,
+                    "row_titles": "0",
+                    "@id": "_:n9",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n10",
+                        "value": "GRU-SVM",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n11",
+                        "value": "0.953125",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 2,
+                    "row_titles": "1",
+                    "@id": "_:n12",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n13",
+                        "value": "Multilayer Perceptron (MLP)",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n14",
+                        "value": "1.0",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 3,
+                    "row_titles": "2",
+                    "@id": "_:n15",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n16",
+                        "value": "Support Vector Machine (SVM)",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n17",
+                        "value": "0.992188",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 4,
+                    "row_titles": "3",
+                    "@id": "_:n18",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n19",
+                        "value": "Linear Regression",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n20",
+                        "value": "0.953125",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 5,
+                    "row_titles": "4",
+                    "@id": "_:n21",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n22",
+                        "value": "Softmax Regression",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n23",
+                        "value": "0.984375",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 6,
+                    "row_titles": "5",
+                    "@id": "_:n24",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n25",
+                        "value": "Nearest Neighbor",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n26",
+                        "value": "0.929825",
+                        "column": "_:n8"
+                      }
+                    ]
+                  }
+                ],
+                "@id": "_:n27"
+              },
+              "doi:aff130c76e68ead3862e#comment": [
+                "All six machine learning algorithms exceeded 90% training accuracy.",
+                "Training data metrics (last-step values from TensorBoard logs)."
+              ]
+            }
+          ],
+          "@context": {
+            "doi": "https://doi.org/21.T11969/",
+            "columns": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#columns",
+            "col_number": "https://doi.org/21.T11969/65ba00e95e60fb8971e6#number",
+            "col_titles": "https://doi.org/21.T11969/65ba00e95e60fb8971e6#titles",
+            "rows": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#rows",
+            "row_number": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#number",
+            "row_titles": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#titles",
+            "cells": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#cells",
+            "column": "https://doi.org/21.T11969/4607bc7c42ac8db29bfc#column",
+            "value": "https://doi.org/21.T11969/4607bc7c42ac8db29bfc#value",
+            "tab_label": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#label"
+          }
+        },
+        {
+          "@id": "_:n1",
+          "@type": "doi:5e782e67e70d0b2a022a",
+          "doi:5e782e67e70d0b2a022a#label": "All six ML algorithms exceeded 90% training accuracy \u2014 Multilayer Perceptron (MLP)",
+          "doi:5e782e67e70d0b2a022a#evaluates": {
+            "@id": "_:n2",
+            "@type": "doi:02f02485ab679a9031f4",
+            "doi:02f02485ab679a9031f4#label": "Multilayer Perceptron (MLP)"
+          },
+          "doi:5e782e67e70d0b2a022a#evaluates_for": {
+            "@id": "_:n3",
+            "@type": "doi:7bb0ddf9221c03b806b0",
+            "doi:7bb0ddf9221c03b806b0#label": "Binary Classification (Breast Cancer Detection)"
+          },
+          "doi:5e782e67e70d0b2a022a#has_input": [
+            {
+              "@id": "_:n4",
+              "@type": "doi:aff130c76e68ead3862e",
+              "doi:aff130c76e68ead3862e#label": "Wisconsin Diagnostic Breast Cancer (WDBC)",
+              "doi:aff130c76e68ead3862e#source_url": {
+                "@id": "_:n5",
+                "@type": "doi:e0efc41346cda4ba84ca"
+              },
+              "doi:aff130c76e68ead3862e#comment": [
+                "70% training / 30% testing split"
+              ]
+            }
+          ],
+          "doi:5e782e67e70d0b2a022a#has_output": [
+            {
+              "@id": "_:n6",
+              "@type": "doi:aff130c76e68ead3862e",
+              "doi:aff130c76e68ead3862e#label": "Training accuracy for all six ML algorithms",
+              "doi:aff130c76e68ead3862e#source_table": {
+                "@type": "doi:0424f6e7026fa4bc2c4a",
+                "tab_label": "training_accuracy_all_models",
+                "columns": [
+                  {
+                    "@type": "doi:65ba00e95e60fb8971e6",
+                    "col_number": 1,
+                    "col_titles": "algorithm",
+                    "@id": "_:n7"
+                  },
+                  {
+                    "@type": "doi:65ba00e95e60fb8971e6",
+                    "col_number": 2,
+                    "col_titles": "training_accuracy",
+                    "@id": "_:n8"
+                  }
+                ],
+                "rows": [
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 1,
+                    "row_titles": "0",
+                    "@id": "_:n9",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n10",
+                        "value": "GRU-SVM",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n11",
+                        "value": "0.953125",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 2,
+                    "row_titles": "1",
+                    "@id": "_:n12",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n13",
+                        "value": "Multilayer Perceptron (MLP)",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n14",
+                        "value": "1.0",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 3,
+                    "row_titles": "2",
+                    "@id": "_:n15",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n16",
+                        "value": "Support Vector Machine (SVM)",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n17",
+                        "value": "0.992188",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 4,
+                    "row_titles": "3",
+                    "@id": "_:n18",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n19",
+                        "value": "Linear Regression",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n20",
+                        "value": "0.953125",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 5,
+                    "row_titles": "4",
+                    "@id": "_:n21",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n22",
+                        "value": "Softmax Regression",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n23",
+                        "value": "0.984375",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 6,
+                    "row_titles": "5",
+                    "@id": "_:n24",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n25",
+                        "value": "Nearest Neighbor",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n26",
+                        "value": "0.929825",
+                        "column": "_:n8"
+                      }
+                    ]
+                  }
+                ],
+                "@id": "_:n27"
+              },
+              "doi:aff130c76e68ead3862e#comment": [
+                "All six machine learning algorithms exceeded 90% training accuracy.",
+                "Training data metrics (last-step values from TensorBoard logs)."
+              ]
+            }
+          ],
+          "@context": {
+            "doi": "https://doi.org/21.T11969/",
+            "columns": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#columns",
+            "col_number": "https://doi.org/21.T11969/65ba00e95e60fb8971e6#number",
+            "col_titles": "https://doi.org/21.T11969/65ba00e95e60fb8971e6#titles",
+            "rows": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#rows",
+            "row_number": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#number",
+            "row_titles": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#titles",
+            "cells": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#cells",
+            "column": "https://doi.org/21.T11969/4607bc7c42ac8db29bfc#column",
+            "value": "https://doi.org/21.T11969/4607bc7c42ac8db29bfc#value",
+            "tab_label": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#label"
+          }
+        },
+        {
+          "@id": "_:n1",
+          "@type": "doi:5e782e67e70d0b2a022a",
+          "doi:5e782e67e70d0b2a022a#label": "All six ML algorithms exceeded 90% training accuracy \u2014 Support Vector Machine (SVM)",
+          "doi:5e782e67e70d0b2a022a#evaluates": {
+            "@id": "_:n2",
+            "@type": "doi:02f02485ab679a9031f4",
+            "doi:02f02485ab679a9031f4#label": "Support Vector Machine (SVM)"
+          },
+          "doi:5e782e67e70d0b2a022a#evaluates_for": {
+            "@id": "_:n3",
+            "@type": "doi:7bb0ddf9221c03b806b0",
+            "doi:7bb0ddf9221c03b806b0#label": "Binary Classification (Breast Cancer Detection)"
+          },
+          "doi:5e782e67e70d0b2a022a#has_input": [
+            {
+              "@id": "_:n4",
+              "@type": "doi:aff130c76e68ead3862e",
+              "doi:aff130c76e68ead3862e#label": "Wisconsin Diagnostic Breast Cancer (WDBC)",
+              "doi:aff130c76e68ead3862e#source_url": {
+                "@id": "_:n5",
+                "@type": "doi:e0efc41346cda4ba84ca"
+              },
+              "doi:aff130c76e68ead3862e#comment": [
+                "70% training / 30% testing split"
+              ]
+            }
+          ],
+          "doi:5e782e67e70d0b2a022a#has_output": [
+            {
+              "@id": "_:n6",
+              "@type": "doi:aff130c76e68ead3862e",
+              "doi:aff130c76e68ead3862e#label": "Training accuracy for all six ML algorithms",
+              "doi:aff130c76e68ead3862e#source_table": {
+                "@type": "doi:0424f6e7026fa4bc2c4a",
+                "tab_label": "training_accuracy_all_models",
+                "columns": [
+                  {
+                    "@type": "doi:65ba00e95e60fb8971e6",
+                    "col_number": 1,
+                    "col_titles": "algorithm",
+                    "@id": "_:n7"
+                  },
+                  {
+                    "@type": "doi:65ba00e95e60fb8971e6",
+                    "col_number": 2,
+                    "col_titles": "training_accuracy",
+                    "@id": "_:n8"
+                  }
+                ],
+                "rows": [
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 1,
+                    "row_titles": "0",
+                    "@id": "_:n9",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n10",
+                        "value": "GRU-SVM",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n11",
+                        "value": "0.953125",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 2,
+                    "row_titles": "1",
+                    "@id": "_:n12",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n13",
+                        "value": "Multilayer Perceptron (MLP)",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n14",
+                        "value": "1.0",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 3,
+                    "row_titles": "2",
+                    "@id": "_:n15",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n16",
+                        "value": "Support Vector Machine (SVM)",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n17",
+                        "value": "0.992188",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 4,
+                    "row_titles": "3",
+                    "@id": "_:n18",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n19",
+                        "value": "Linear Regression",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n20",
+                        "value": "0.953125",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 5,
+                    "row_titles": "4",
+                    "@id": "_:n21",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n22",
+                        "value": "Softmax Regression",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n23",
+                        "value": "0.984375",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 6,
+                    "row_titles": "5",
+                    "@id": "_:n24",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n25",
+                        "value": "Nearest Neighbor",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n26",
+                        "value": "0.929825",
+                        "column": "_:n8"
+                      }
+                    ]
+                  }
+                ],
+                "@id": "_:n27"
+              },
+              "doi:aff130c76e68ead3862e#comment": [
+                "All six machine learning algorithms exceeded 90% training accuracy.",
+                "Training data metrics (last-step values from TensorBoard logs)."
+              ]
+            }
+          ],
+          "@context": {
+            "doi": "https://doi.org/21.T11969/",
+            "columns": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#columns",
+            "col_number": "https://doi.org/21.T11969/65ba00e95e60fb8971e6#number",
+            "col_titles": "https://doi.org/21.T11969/65ba00e95e60fb8971e6#titles",
+            "rows": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#rows",
+            "row_number": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#number",
+            "row_titles": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#titles",
+            "cells": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#cells",
+            "column": "https://doi.org/21.T11969/4607bc7c42ac8db29bfc#column",
+            "value": "https://doi.org/21.T11969/4607bc7c42ac8db29bfc#value",
+            "tab_label": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#label"
+          }
+        },
+        {
+          "@id": "_:n1",
+          "@type": "doi:5e782e67e70d0b2a022a",
+          "doi:5e782e67e70d0b2a022a#label": "All six ML algorithms exceeded 90% training accuracy \u2014 Linear Regression",
+          "doi:5e782e67e70d0b2a022a#evaluates": {
+            "@id": "_:n2",
+            "@type": "doi:02f02485ab679a9031f4",
+            "doi:02f02485ab679a9031f4#label": "Linear Regression"
+          },
+          "doi:5e782e67e70d0b2a022a#evaluates_for": {
+            "@id": "_:n3",
+            "@type": "doi:7bb0ddf9221c03b806b0",
+            "doi:7bb0ddf9221c03b806b0#label": "Binary Classification (Breast Cancer Detection)"
+          },
+          "doi:5e782e67e70d0b2a022a#has_input": [
+            {
+              "@id": "_:n4",
+              "@type": "doi:aff130c76e68ead3862e",
+              "doi:aff130c76e68ead3862e#label": "Wisconsin Diagnostic Breast Cancer (WDBC)",
+              "doi:aff130c76e68ead3862e#source_url": {
+                "@id": "_:n5",
+                "@type": "doi:e0efc41346cda4ba84ca"
+              },
+              "doi:aff130c76e68ead3862e#comment": [
+                "70% training / 30% testing split"
+              ]
+            }
+          ],
+          "doi:5e782e67e70d0b2a022a#has_output": [
+            {
+              "@id": "_:n6",
+              "@type": "doi:aff130c76e68ead3862e",
+              "doi:aff130c76e68ead3862e#label": "Training accuracy for all six ML algorithms",
+              "doi:aff130c76e68ead3862e#source_table": {
+                "@type": "doi:0424f6e7026fa4bc2c4a",
+                "tab_label": "training_accuracy_all_models",
+                "columns": [
+                  {
+                    "@type": "doi:65ba00e95e60fb8971e6",
+                    "col_number": 1,
+                    "col_titles": "algorithm",
+                    "@id": "_:n7"
+                  },
+                  {
+                    "@type": "doi:65ba00e95e60fb8971e6",
+                    "col_number": 2,
+                    "col_titles": "training_accuracy",
+                    "@id": "_:n8"
+                  }
+                ],
+                "rows": [
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 1,
+                    "row_titles": "0",
+                    "@id": "_:n9",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n10",
+                        "value": "GRU-SVM",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n11",
+                        "value": "0.953125",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 2,
+                    "row_titles": "1",
+                    "@id": "_:n12",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n13",
+                        "value": "Multilayer Perceptron (MLP)",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n14",
+                        "value": "1.0",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 3,
+                    "row_titles": "2",
+                    "@id": "_:n15",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n16",
+                        "value": "Support Vector Machine (SVM)",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n17",
+                        "value": "0.992188",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 4,
+                    "row_titles": "3",
+                    "@id": "_:n18",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n19",
+                        "value": "Linear Regression",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n20",
+                        "value": "0.953125",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 5,
+                    "row_titles": "4",
+                    "@id": "_:n21",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n22",
+                        "value": "Softmax Regression",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n23",
+                        "value": "0.984375",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 6,
+                    "row_titles": "5",
+                    "@id": "_:n24",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n25",
+                        "value": "Nearest Neighbor",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n26",
+                        "value": "0.929825",
+                        "column": "_:n8"
+                      }
+                    ]
+                  }
+                ],
+                "@id": "_:n27"
+              },
+              "doi:aff130c76e68ead3862e#comment": [
+                "All six machine learning algorithms exceeded 90% training accuracy.",
+                "Training data metrics (last-step values from TensorBoard logs)."
+              ]
+            }
+          ],
+          "@context": {
+            "doi": "https://doi.org/21.T11969/",
+            "columns": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#columns",
+            "col_number": "https://doi.org/21.T11969/65ba00e95e60fb8971e6#number",
+            "col_titles": "https://doi.org/21.T11969/65ba00e95e60fb8971e6#titles",
+            "rows": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#rows",
+            "row_number": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#number",
+            "row_titles": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#titles",
+            "cells": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#cells",
+            "column": "https://doi.org/21.T11969/4607bc7c42ac8db29bfc#column",
+            "value": "https://doi.org/21.T11969/4607bc7c42ac8db29bfc#value",
+            "tab_label": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#label"
+          }
+        },
+        {
+          "@id": "_:n1",
+          "@type": "doi:5e782e67e70d0b2a022a",
+          "doi:5e782e67e70d0b2a022a#label": "All six ML algorithms exceeded 90% training accuracy \u2014 Softmax Regression",
+          "doi:5e782e67e70d0b2a022a#evaluates": {
+            "@id": "_:n2",
+            "@type": "doi:02f02485ab679a9031f4",
+            "doi:02f02485ab679a9031f4#label": "Softmax Regression"
+          },
+          "doi:5e782e67e70d0b2a022a#evaluates_for": {
+            "@id": "_:n3",
+            "@type": "doi:7bb0ddf9221c03b806b0",
+            "doi:7bb0ddf9221c03b806b0#label": "Binary Classification (Breast Cancer Detection)"
+          },
+          "doi:5e782e67e70d0b2a022a#has_input": [
+            {
+              "@id": "_:n4",
+              "@type": "doi:aff130c76e68ead3862e",
+              "doi:aff130c76e68ead3862e#label": "Wisconsin Diagnostic Breast Cancer (WDBC)",
+              "doi:aff130c76e68ead3862e#source_url": {
+                "@id": "_:n5",
+                "@type": "doi:e0efc41346cda4ba84ca"
+              },
+              "doi:aff130c76e68ead3862e#comment": [
+                "70% training / 30% testing split"
+              ]
+            }
+          ],
+          "doi:5e782e67e70d0b2a022a#has_output": [
+            {
+              "@id": "_:n6",
+              "@type": "doi:aff130c76e68ead3862e",
+              "doi:aff130c76e68ead3862e#label": "Training accuracy for all six ML algorithms",
+              "doi:aff130c76e68ead3862e#source_table": {
+                "@type": "doi:0424f6e7026fa4bc2c4a",
+                "tab_label": "training_accuracy_all_models",
+                "columns": [
+                  {
+                    "@type": "doi:65ba00e95e60fb8971e6",
+                    "col_number": 1,
+                    "col_titles": "algorithm",
+                    "@id": "_:n7"
+                  },
+                  {
+                    "@type": "doi:65ba00e95e60fb8971e6",
+                    "col_number": 2,
+                    "col_titles": "training_accuracy",
+                    "@id": "_:n8"
+                  }
+                ],
+                "rows": [
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 1,
+                    "row_titles": "0",
+                    "@id": "_:n9",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n10",
+                        "value": "GRU-SVM",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n11",
+                        "value": "0.953125",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 2,
+                    "row_titles": "1",
+                    "@id": "_:n12",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n13",
+                        "value": "Multilayer Perceptron (MLP)",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n14",
+                        "value": "1.0",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 3,
+                    "row_titles": "2",
+                    "@id": "_:n15",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n16",
+                        "value": "Support Vector Machine (SVM)",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n17",
+                        "value": "0.992188",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 4,
+                    "row_titles": "3",
+                    "@id": "_:n18",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n19",
+                        "value": "Linear Regression",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n20",
+                        "value": "0.953125",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 5,
+                    "row_titles": "4",
+                    "@id": "_:n21",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n22",
+                        "value": "Softmax Regression",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n23",
+                        "value": "0.984375",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 6,
+                    "row_titles": "5",
+                    "@id": "_:n24",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n25",
+                        "value": "Nearest Neighbor",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n26",
+                        "value": "0.929825",
+                        "column": "_:n8"
+                      }
+                    ]
+                  }
+                ],
+                "@id": "_:n27"
+              },
+              "doi:aff130c76e68ead3862e#comment": [
+                "All six machine learning algorithms exceeded 90% training accuracy.",
+                "Training data metrics (last-step values from TensorBoard logs)."
+              ]
+            }
+          ],
+          "@context": {
+            "doi": "https://doi.org/21.T11969/",
+            "columns": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#columns",
+            "col_number": "https://doi.org/21.T11969/65ba00e95e60fb8971e6#number",
+            "col_titles": "https://doi.org/21.T11969/65ba00e95e60fb8971e6#titles",
+            "rows": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#rows",
+            "row_number": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#number",
+            "row_titles": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#titles",
+            "cells": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#cells",
+            "column": "https://doi.org/21.T11969/4607bc7c42ac8db29bfc#column",
+            "value": "https://doi.org/21.T11969/4607bc7c42ac8db29bfc#value",
+            "tab_label": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#label"
+          }
+        },
+        {
+          "@id": "_:n1",
+          "@type": "doi:5e782e67e70d0b2a022a",
+          "doi:5e782e67e70d0b2a022a#label": "All six ML algorithms exceeded 90% training accuracy \u2014 Nearest Neighbor",
+          "doi:5e782e67e70d0b2a022a#evaluates": {
+            "@id": "_:n2",
+            "@type": "doi:02f02485ab679a9031f4",
+            "doi:02f02485ab679a9031f4#label": "Nearest Neighbor"
+          },
+          "doi:5e782e67e70d0b2a022a#evaluates_for": {
+            "@id": "_:n3",
+            "@type": "doi:7bb0ddf9221c03b806b0",
+            "doi:7bb0ddf9221c03b806b0#label": "Binary Classification (Breast Cancer Detection)"
+          },
+          "doi:5e782e67e70d0b2a022a#has_input": [
+            {
+              "@id": "_:n4",
+              "@type": "doi:aff130c76e68ead3862e",
+              "doi:aff130c76e68ead3862e#label": "Wisconsin Diagnostic Breast Cancer (WDBC)",
+              "doi:aff130c76e68ead3862e#source_url": {
+                "@id": "_:n5",
+                "@type": "doi:e0efc41346cda4ba84ca"
+              },
+              "doi:aff130c76e68ead3862e#comment": [
+                "70% training / 30% testing split"
+              ]
+            }
+          ],
+          "doi:5e782e67e70d0b2a022a#has_output": [
+            {
+              "@id": "_:n6",
+              "@type": "doi:aff130c76e68ead3862e",
+              "doi:aff130c76e68ead3862e#label": "Training accuracy for all six ML algorithms",
+              "doi:aff130c76e68ead3862e#source_table": {
+                "@type": "doi:0424f6e7026fa4bc2c4a",
+                "tab_label": "training_accuracy_all_models",
+                "columns": [
+                  {
+                    "@type": "doi:65ba00e95e60fb8971e6",
+                    "col_number": 1,
+                    "col_titles": "algorithm",
+                    "@id": "_:n7"
+                  },
+                  {
+                    "@type": "doi:65ba00e95e60fb8971e6",
+                    "col_number": 2,
+                    "col_titles": "training_accuracy",
+                    "@id": "_:n8"
+                  }
+                ],
+                "rows": [
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 1,
+                    "row_titles": "0",
+                    "@id": "_:n9",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n10",
+                        "value": "GRU-SVM",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n11",
+                        "value": "0.953125",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 2,
+                    "row_titles": "1",
+                    "@id": "_:n12",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n13",
+                        "value": "Multilayer Perceptron (MLP)",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n14",
+                        "value": "1.0",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 3,
+                    "row_titles": "2",
+                    "@id": "_:n15",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n16",
+                        "value": "Support Vector Machine (SVM)",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n17",
+                        "value": "0.992188",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 4,
+                    "row_titles": "3",
+                    "@id": "_:n18",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n19",
+                        "value": "Linear Regression",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n20",
+                        "value": "0.953125",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 5,
+                    "row_titles": "4",
+                    "@id": "_:n21",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n22",
+                        "value": "Softmax Regression",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n23",
+                        "value": "0.984375",
+                        "column": "_:n8"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 6,
+                    "row_titles": "5",
+                    "@id": "_:n24",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n25",
+                        "value": "Nearest Neighbor",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n26",
+                        "value": "0.929825",
+                        "column": "_:n8"
+                      }
+                    ]
+                  }
+                ],
+                "@id": "_:n27"
+              },
+              "doi:aff130c76e68ead3862e#comment": [
+                "All six machine learning algorithms exceeded 90% training accuracy.",
+                "Training data metrics (last-step values from TensorBoard logs)."
+              ]
+            }
+          ],
+          "@context": {
+            "doi": "https://doi.org/21.T11969/",
+            "columns": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#columns",
+            "col_number": "https://doi.org/21.T11969/65ba00e95e60fb8971e6#number",
+            "col_titles": "https://doi.org/21.T11969/65ba00e95e60fb8971e6#titles",
+            "rows": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#rows",
+            "row_number": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#number",
+            "row_titles": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#titles",
+            "cells": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#cells",
+            "column": "https://doi.org/21.T11969/4607bc7c42ac8db29bfc#column",
+            "value": "https://doi.org/21.T11969/4607bc7c42ac8db29bfc#value",
+            "tab_label": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#label"
+          }
+        }
+      ]
+    },
+    {
+      "conclusion": "The algorithms that achieved the highest test accuracy are MLP (~99.04%) and SVM (~99.22%).",
+      "algorithm_evaluations": [
+        {
+          "@id": "_:n1",
+          "@type": "doi:5e782e67e70d0b2a022a",
+          "doi:5e782e67e70d0b2a022a#label": "Highest test accuracy \u2014 Multilayer Perceptron (MLP)",
+          "doi:5e782e67e70d0b2a022a#evaluates": {
+            "@id": "_:n2",
+            "@type": "doi:02f02485ab679a9031f4",
+            "doi:02f02485ab679a9031f4#label": "Multilayer Perceptron (MLP)"
+          },
+          "doi:5e782e67e70d0b2a022a#evaluates_for": {
+            "@id": "_:n3",
+            "@type": "doi:7bb0ddf9221c03b806b0",
+            "doi:7bb0ddf9221c03b806b0#label": "Binary Classification (Breast Cancer Detection)"
+          },
+          "doi:5e782e67e70d0b2a022a#has_input": [
+            {
+              "@id": "_:n4",
+              "@type": "doi:aff130c76e68ead3862e",
+              "doi:aff130c76e68ead3862e#label": "Wisconsin Diagnostic Breast Cancer (WDBC)",
+              "doi:aff130c76e68ead3862e#source_url": {
+                "@id": "_:n5",
+                "@type": "doi:e0efc41346cda4ba84ca"
+              },
+              "doi:aff130c76e68ead3862e#comment": [
+                "70% training / 30% testing split"
+              ]
+            }
+          ],
+          "doi:5e782e67e70d0b2a022a#has_output": [
+            {
+              "@id": "_:n6",
+              "@type": "doi:aff130c76e68ead3862e",
+              "doi:aff130c76e68ead3862e#label": "Highest test accuracy algorithms",
+              "doi:aff130c76e68ead3862e#source_table": {
+                "@type": "doi:0424f6e7026fa4bc2c4a",
+                "tab_label": "highest_accuracy_models",
+                "columns": [
+                  {
+                    "@type": "doi:65ba00e95e60fb8971e6",
+                    "col_number": 1,
+                    "col_titles": "algorithm",
+                    "@id": "_:n7"
+                  },
+                  {
+                    "@type": "doi:65ba00e95e60fb8971e6",
+                    "col_number": 2,
+                    "col_titles": "accuracy",
+                    "@id": "_:n8"
+                  },
+                  {
+                    "@type": "doi:65ba00e95e60fb8971e6",
+                    "col_number": 3,
+                    "col_titles": "sensitivity",
+                    "@id": "_:n9"
+                  },
+                  {
+                    "@type": "doi:65ba00e95e60fb8971e6",
+                    "col_number": 4,
+                    "col_titles": "specificity",
+                    "@id": "_:n10"
+                  }
+                ],
+                "rows": [
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 1,
+                    "row_titles": "0",
+                    "@id": "_:n11",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n12",
+                        "value": "Multilayer Perceptron (MLP)",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n13",
+                        "value": "1.0",
+                        "column": "_:n8"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n14",
+                        "value": "1.0",
+                        "column": "_:n9"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n15",
+                        "value": "1.0",
+                        "column": "_:n10"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 2,
+                    "row_titles": "1",
+                    "@id": "_:n16",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n17",
+                        "value": "Support Vector Machine (SVM)",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n18",
+                        "value": "0.992188",
+                        "column": "_:n8"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n19",
+                        "value": "1.0",
+                        "column": "_:n9"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n20",
+                        "value": "0.976744",
+                        "column": "_:n10"
+                      }
+                    ]
+                  }
+                ],
+                "@id": "_:n21"
+              },
+              "doi:aff130c76e68ead3862e#comment": [
+                "The algorithms that achieved the highest test accuracy are Multilayer Perceptron (MLP) and Support Vector Machine (SVM).",
+                "MLP achieved ~99.04% (100% sensitivity/specificity).",
+                "SVM achieved ~99.22% test accuracy."
+              ]
+            }
+          ],
+          "@context": {
+            "doi": "https://doi.org/21.T11969/",
+            "columns": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#columns",
+            "col_number": "https://doi.org/21.T11969/65ba00e95e60fb8971e6#number",
+            "col_titles": "https://doi.org/21.T11969/65ba00e95e60fb8971e6#titles",
+            "rows": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#rows",
+            "row_number": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#number",
+            "row_titles": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#titles",
+            "cells": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#cells",
+            "column": "https://doi.org/21.T11969/4607bc7c42ac8db29bfc#column",
+            "value": "https://doi.org/21.T11969/4607bc7c42ac8db29bfc#value",
+            "tab_label": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#label"
+          }
+        },
+        {
+          "@id": "_:n1",
+          "@type": "doi:5e782e67e70d0b2a022a",
+          "doi:5e782e67e70d0b2a022a#label": "Highest test accuracy \u2014 Support Vector Machine (SVM)",
+          "doi:5e782e67e70d0b2a022a#evaluates": {
+            "@id": "_:n2",
+            "@type": "doi:02f02485ab679a9031f4",
+            "doi:02f02485ab679a9031f4#label": "Support Vector Machine (SVM)"
+          },
+          "doi:5e782e67e70d0b2a022a#evaluates_for": {
+            "@id": "_:n3",
+            "@type": "doi:7bb0ddf9221c03b806b0",
+            "doi:7bb0ddf9221c03b806b0#label": "Binary Classification (Breast Cancer Detection)"
+          },
+          "doi:5e782e67e70d0b2a022a#has_input": [
+            {
+              "@id": "_:n4",
+              "@type": "doi:aff130c76e68ead3862e",
+              "doi:aff130c76e68ead3862e#label": "Wisconsin Diagnostic Breast Cancer (WDBC)",
+              "doi:aff130c76e68ead3862e#source_url": {
+                "@id": "_:n5",
+                "@type": "doi:e0efc41346cda4ba84ca"
+              },
+              "doi:aff130c76e68ead3862e#comment": [
+                "70% training / 30% testing split"
+              ]
+            }
+          ],
+          "doi:5e782e67e70d0b2a022a#has_output": [
+            {
+              "@id": "_:n6",
+              "@type": "doi:aff130c76e68ead3862e",
+              "doi:aff130c76e68ead3862e#label": "Highest test accuracy algorithms",
+              "doi:aff130c76e68ead3862e#source_table": {
+                "@type": "doi:0424f6e7026fa4bc2c4a",
+                "tab_label": "highest_accuracy_models",
+                "columns": [
+                  {
+                    "@type": "doi:65ba00e95e60fb8971e6",
+                    "col_number": 1,
+                    "col_titles": "algorithm",
+                    "@id": "_:n7"
+                  },
+                  {
+                    "@type": "doi:65ba00e95e60fb8971e6",
+                    "col_number": 2,
+                    "col_titles": "accuracy",
+                    "@id": "_:n8"
+                  },
+                  {
+                    "@type": "doi:65ba00e95e60fb8971e6",
+                    "col_number": 3,
+                    "col_titles": "sensitivity",
+                    "@id": "_:n9"
+                  },
+                  {
+                    "@type": "doi:65ba00e95e60fb8971e6",
+                    "col_number": 4,
+                    "col_titles": "specificity",
+                    "@id": "_:n10"
+                  }
+                ],
+                "rows": [
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 1,
+                    "row_titles": "0",
+                    "@id": "_:n11",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n12",
+                        "value": "Multilayer Perceptron (MLP)",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n13",
+                        "value": "1.0",
+                        "column": "_:n8"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n14",
+                        "value": "1.0",
+                        "column": "_:n9"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n15",
+                        "value": "1.0",
+                        "column": "_:n10"
+                      }
+                    ]
+                  },
+                  {
+                    "@type": "doi:9bf7a8e8909bfd491b38",
+                    "row_number": 2,
+                    "row_titles": "1",
+                    "@id": "_:n16",
+                    "cells": [
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n17",
+                        "value": "Support Vector Machine (SVM)",
+                        "column": "_:n7"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n18",
+                        "value": "0.992188",
+                        "column": "_:n8"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n19",
+                        "value": "1.0",
+                        "column": "_:n9"
+                      },
+                      {
+                        "@type": "doi:4607bc7c42ac8db29bfc",
+                        "@id": "_:n20",
+                        "value": "0.976744",
+                        "column": "_:n10"
+                      }
+                    ]
+                  }
+                ],
+                "@id": "_:n21"
+              },
+              "doi:aff130c76e68ead3862e#comment": [
+                "The algorithms that achieved the highest test accuracy are Multilayer Perceptron (MLP) and Support Vector Machine (SVM).",
+                "MLP achieved ~99.04% (100% sensitivity/specificity).",
+                "SVM achieved ~99.22% test accuracy."
+              ]
+            }
+          ],
+          "@context": {
+            "doi": "https://doi.org/21.T11969/",
+            "columns": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#columns",
+            "col_number": "https://doi.org/21.T11969/65ba00e95e60fb8971e6#number",
+            "col_titles": "https://doi.org/21.T11969/65ba00e95e60fb8971e6#titles",
+            "rows": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#rows",
+            "row_number": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#number",
+            "row_titles": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#titles",
+            "cells": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#cells",
+            "column": "https://doi.org/21.T11969/4607bc7c42ac8db29bfc#column",
+            "value": "https://doi.org/21.T11969/4607bc7c42ac8db29bfc#value",
+            "tab_label": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#label"
+          }
+        }
+      ]
+    },
+    {
+      "conclusion": "The WDBC dataset features are linearly separable, as demonstrated by scatter plots of mean features, error features, and worst features.",
+      "algorithm_evaluations": [
+        {
+          "@id": "_:n1",
+          "@type": "doi:5e782e67e70d0b2a022a",
+          "doi:5e782e67e70d0b2a022a#label": "WDBC features are linearly separable (scatter plot analysis)",
+          "doi:5e782e67e70d0b2a022a#evaluates": {
+            "@id": "_:n2",
+            "@type": "doi:02f02485ab679a9031f4",
+            "doi:02f02485ab679a9031f4#label": "Feature Analysis (Scatter Plots)"
+          },
+          "doi:5e782e67e70d0b2a022a#evaluates_for": {
+            "@id": "_:n3",
+            "@type": "doi:7bb0ddf9221c03b806b0",
+            "doi:7bb0ddf9221c03b806b0#label": "Linear Separability Analysis"
+          },
+          "doi:5e782e67e70d0b2a022a#has_input": [
+            {
+              "@id": "_:n4",
+              "@type": "doi:aff130c76e68ead3862e",
+              "doi:aff130c76e68ead3862e#label": "Wisconsin Diagnostic Breast Cancer (WDBC)",
+              "doi:aff130c76e68ead3862e#source_url": {
+                "@id": "_:n5",
+                "@type": "doi:e0efc41346cda4ba84ca"
+              },
+              "doi:aff130c76e68ead3862e#comment": [
+                "Features computed from digitized images of FNA tests on a breast mass."
+              ]
+            }
+          ],
+          "doi:5e782e67e70d0b2a022a#has_output": [
+            {
+              "@id": "_:n6",
+              "@type": "doi:aff130c76e68ead3862e",
+              "doi:aff130c76e68ead3862e#label": "Linear separability evidence from scatter plots",
+              "doi:aff130c76e68ead3862e#comment": [
+                "The WDBC dataset features are linearly separable, as demonstrated by scatter plots of mean features, error features, and worst features.",
+                "Scatter plots of mean, SE, and worst feature groups show clear class separation.",
+                "This linear separability explains the high accuracy of linear classifiers."
+              ]
+            }
+          ],
+          "@context": {
+            "doi": "https://doi.org/21.T11969/",
+            "columns": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#columns",
+            "col_number": "https://doi.org/21.T11969/65ba00e95e60fb8971e6#number",
+            "col_titles": "https://doi.org/21.T11969/65ba00e95e60fb8971e6#titles",
+            "rows": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#rows",
+            "row_number": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#number",
+            "row_titles": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#titles",
+            "cells": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#cells",
+            "column": "https://doi.org/21.T11969/4607bc7c42ac8db29bfc#column",
+            "value": "https://doi.org/21.T11969/4607bc7c42ac8db29bfc#value",
+            "tab_label": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#label"
+          }
+        }
+      ]
+    }
+  ]
+}
