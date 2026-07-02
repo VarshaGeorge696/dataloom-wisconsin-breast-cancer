@@ -1,0 +1,218 @@
+{
+  "@id": "_:n1",
+  "@type": "doi:feeb33ad3e4440682a4d",
+  "doi:feeb33ad3e4440682a4d#label": "Support Vector Machine (SVM) training accuracy statement",
+  "doi:feeb33ad3e4440682a4d#has_part": {
+    "@id": "_:n2",
+    "@type": "doi:5e782e67e70d0b2a022a",
+    "doi:5e782e67e70d0b2a022a#label": "Training accuracy evaluation of Support Vector Machine (SVM)",
+    "doi:5e782e67e70d0b2a022a#executes": {
+      "@id": "_:n3",
+      "@type": "doi:abef9f1c0d48853f3e51",
+      "doi:abef9f1c0d48853f3e51#label": "models.svm.SVM.train",
+      "doi:abef9f1c0d48853f3e51#part_of": {
+        "@id": "_:n4",
+        "@type": "doi:4b99260369df9110f9bd",
+        "doi:4b99260369df9110f9bd#label": "TensorFlow",
+        "doi:4b99260369df9110f9bd#part_of": {
+          "@id": "_:n5",
+          "@type": "doi:c981d125d1a564c9f573",
+          "doi:c981d125d1a564c9f573#label": "Python",
+          "doi:c981d125d1a564c9f573#version_info": "3.12.3"
+        },
+        "doi:4b99260369df9110f9bd#has_support_url": "https://www.tensorflow.org/"
+      },
+      "doi:abef9f1c0d48853f3e51#is_implemented_by": "SVM.train(...)",
+      "doi:abef9f1c0d48853f3e51#has_support_url": "https://www.tensorflow.org/api_docs/python/tf"
+    },
+    "doi:5e782e67e70d0b2a022a#evaluates": {
+      "@id": "_:n6",
+      "@type": "doi:02f02485ab679a9031f4",
+      "doi:02f02485ab679a9031f4#label": "Support Vector Machine (SVM)"
+    },
+    "doi:5e782e67e70d0b2a022a#evaluates_for": {
+      "@id": "_:n7",
+      "@type": "doi:7bb0ddf9221c03b806b0",
+      "doi:7bb0ddf9221c03b806b0#label": "Binary Classification (Breast Cancer Detection)"
+    },
+    "doi:5e782e67e70d0b2a022a#has_input": {
+      "@id": "_:n8",
+      "@type": "doi:aff130c76e68ead3862e",
+      "doi:aff130c76e68ead3862e#label": "WDBC dataset",
+      "doi:aff130c76e68ead3862e#source_url": "https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)"
+    },
+    "doi:5e782e67e70d0b2a022a#has_output": {
+      "@id": "_:n9",
+      "@type": "doi:aff130c76e68ead3862e",
+      "doi:aff130c76e68ead3862e#source_table": {
+        "@type": "doi:0424f6e7026fa4bc2c4a",
+        "tab_label": "svm_metrics",
+        "columns": [
+          {
+            "@type": "doi:65ba00e95e60fb8971e6",
+            "col_number": 1,
+            "col_titles": "accuracy",
+            "@id": "_:n10"
+          },
+          {
+            "@type": "doi:65ba00e95e60fb8971e6",
+            "col_number": 2,
+            "col_titles": "sensitivity",
+            "@id": "_:n11"
+          },
+          {
+            "@type": "doi:65ba00e95e60fb8971e6",
+            "col_number": 3,
+            "col_titles": "specificity",
+            "@id": "_:n12"
+          },
+          {
+            "@type": "doi:65ba00e95e60fb8971e6",
+            "col_number": 4,
+            "col_titles": "true_positives",
+            "@id": "_:n13"
+          },
+          {
+            "@type": "doi:65ba00e95e60fb8971e6",
+            "col_number": 5,
+            "col_titles": "true_negatives",
+            "@id": "_:n14"
+          },
+          {
+            "@type": "doi:65ba00e95e60fb8971e6",
+            "col_number": 6,
+            "col_titles": "false_positives",
+            "@id": "_:n15"
+          },
+          {
+            "@type": "doi:65ba00e95e60fb8971e6",
+            "col_number": 7,
+            "col_titles": "false_negatives",
+            "@id": "_:n16"
+          },
+          {
+            "@type": "doi:65ba00e95e60fb8971e6",
+            "col_number": 8,
+            "col_titles": "total_samples",
+            "@id": "_:n17"
+          }
+        ],
+        "rows": [
+          {
+            "@type": "doi:9bf7a8e8909bfd491b38",
+            "row_number": 1,
+            "row_titles": "0",
+            "@id": "_:n18",
+            "cells": [
+              {
+                "@type": "doi:4607bc7c42ac8db29bfc",
+                "@id": "_:n19",
+                "value": "0.992188",
+                "column": "_:n10"
+              },
+              {
+                "@type": "doi:4607bc7c42ac8db29bfc",
+                "@id": "_:n20",
+                "value": "1.0",
+                "column": "_:n11"
+              },
+              {
+                "@type": "doi:4607bc7c42ac8db29bfc",
+                "@id": "_:n21",
+                "value": "0.976744",
+                "column": "_:n12"
+              },
+              {
+                "@type": "doi:4607bc7c42ac8db29bfc",
+                "@id": "_:n22",
+                "value": "85.0",
+                "column": "_:n13"
+              },
+              {
+                "@type": "doi:4607bc7c42ac8db29bfc",
+                "@id": "_:n23",
+                "value": "42.0",
+                "column": "_:n14"
+              },
+              {
+                "@type": "doi:4607bc7c42ac8db29bfc",
+                "@id": "_:n24",
+                "value": "1.0",
+                "column": "_:n15"
+              },
+              {
+                "@type": "doi:4607bc7c42ac8db29bfc",
+                "@id": "_:n25",
+                "value": "0.0",
+                "column": "_:n16"
+              },
+              {
+                "@type": "doi:4607bc7c42ac8db29bfc",
+                "@id": "_:n26",
+                "value": "128.0",
+                "column": "_:n17"
+              }
+            ]
+          }
+        ],
+        "@id": "_:n27"
+      },
+      "doi:aff130c76e68ead3862e#has_part": [
+        {
+          "@id": "_:n28",
+          "@type": "doi:cceac5fb8acf5ade2bf5",
+          "doi:cceac5fb8acf5ade2bf5#label": "Accuracy"
+        },
+        {
+          "@id": "_:n29",
+          "@type": "doi:cceac5fb8acf5ade2bf5",
+          "doi:cceac5fb8acf5ade2bf5#label": "Sensitivity"
+        },
+        {
+          "@id": "_:n30",
+          "@type": "doi:cceac5fb8acf5ade2bf5",
+          "doi:cceac5fb8acf5ade2bf5#label": "Specificity"
+        },
+        {
+          "@id": "_:n31",
+          "@type": "doi:cceac5fb8acf5ade2bf5",
+          "doi:cceac5fb8acf5ade2bf5#label": "True Positives"
+        },
+        {
+          "@id": "_:n32",
+          "@type": "doi:cceac5fb8acf5ade2bf5",
+          "doi:cceac5fb8acf5ade2bf5#label": "True Negatives"
+        },
+        {
+          "@id": "_:n33",
+          "@type": "doi:cceac5fb8acf5ade2bf5",
+          "doi:cceac5fb8acf5ade2bf5#label": "False Positives"
+        },
+        {
+          "@id": "_:n34",
+          "@type": "doi:cceac5fb8acf5ade2bf5",
+          "doi:cceac5fb8acf5ade2bf5#label": "False Negatives"
+        },
+        {
+          "@id": "_:n35",
+          "@type": "doi:cceac5fb8acf5ade2bf5",
+          "doi:cceac5fb8acf5ade2bf5#label": "Total Samples"
+        }
+      ]
+    }
+  },
+  "doi:feeb33ad3e4440682a4d#is_implemented_by": "main_svm.py",
+  "@context": {
+    "doi": "https://doi.org/21.T11969/",
+    "columns": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#columns",
+    "col_number": "https://doi.org/21.T11969/65ba00e95e60fb8971e6#number",
+    "col_titles": "https://doi.org/21.T11969/65ba00e95e60fb8971e6#titles",
+    "rows": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#rows",
+    "row_number": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#number",
+    "row_titles": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#titles",
+    "cells": "https://doi.org/21.T11969/9bf7a8e8909bfd491b38#cells",
+    "column": "https://doi.org/21.T11969/4607bc7c42ac8db29bfc#column",
+    "value": "https://doi.org/21.T11969/4607bc7c42ac8db29bfc#value",
+    "tab_label": "https://doi.org/21.T11969/0424f6e7026fa4bc2c4a#label"
+  }
+}
